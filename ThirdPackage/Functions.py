@@ -103,7 +103,7 @@ func(text)"""
 
 
 #תרגיל 5 דף 2
-"""def roundd(num):
+"""def rounddd(num):
     newnum=num-int(num)
     if newnum > 0.5:
         return int(num)+1
