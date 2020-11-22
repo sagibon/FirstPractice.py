@@ -46,5 +46,27 @@ class Course:
 
 
 class HardDisk():
-    
+
+    def write(self):
+        print(f"hard disk size: {self.space} used space: {self.usedspace}, number of files {self.numoffiles} ,free space: {self.freeSpace()}")
+
+    def freeSpace(self):
+        return self.space-self.usedspace
+
+    def addFile(self, sizeadd):
+        if self.usedspace + sizeadd <= self.space:
+            self.usedspace+= sizeadd
+            self.numoffiles+=1
+            return True
+        else:
+            print("Cant add file, memory full")
+            return False
+
+    def delFile(self, sizedel):
+            self.usedspace -= sizedel
+            self.numoffiles -= 1
+            if self.usedspace < 0:
+                self.usedspace = 0
+            if self.numoffiles < 0:
+                self.numoffiles = 0
 
