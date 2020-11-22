@@ -46,8 +46,8 @@ class Course:
 
 
 class HardDisk():
-    def __init__(self):
-        self.space = 100
+    def __init__(self,space):
+        self.space = space
         self.usedspace = 0
         self.numoffiles = 0
 
@@ -73,6 +73,5 @@ class HardDisk():
                 self.usedspace = 0
             if self.numoffiles < 0:
                 self.numoffiles = 0
-class File:
-    
+
 
