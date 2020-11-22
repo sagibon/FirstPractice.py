@@ -1,7 +1,4 @@
 class Person:
-    def __init__(self):
-        self.age = None
-
     def show(self):
         print(f"name: {self.name}, age: {self.age}, kids: {self.kids}")
 
@@ -28,3 +25,26 @@ class Circle:
     
     def circumference(self, radius):
         return 2 * self.pi * radius
+
+class Course:
+
+    def write(self):
+        print(f"course number: {self.number}. course name: {self.name}. number enrolled: {self.enrolled}. max: {self.max}")
+
+    def avail(self):
+        return self.max-self.enrolled
+
+    def newstudents(self, newones):
+        if self.enrolled < self.max:
+            self.enrolled += newones
+
+        elif self.enrolled == self.max:
+            print("Course is full!")
+
+        else:
+            print("error")
+
+
+class HardDisk():
+    
+

@@ -4,7 +4,7 @@ def click():
     text = entry1.get()
     encrypted = ''
     for i in text:
-        encrypted+=chr(ord(i)^123)
+        encrypted+=chr(ord(i)^11)
     output.insert(tkinter.INSERT, encrypted)
 def copy():
     r = tkinter.Tk()
@@ -17,7 +17,6 @@ def copy():
 def addToClipBoard(text):
     command = 'echo ' + text.strip() + '| clip'
     os.system(command)
-
 
 #MAIN WINDOW
 window = tkinter.Tk()
