@@ -46,6 +46,10 @@ class Course:
 
 
 class HardDisk():
+    def __init__(self):
+        self.space = 100
+        self.usedspace = 0
+        self.numoffiles = 0
 
     def write(self):
         print(f"hard disk size: {self.space} used space: {self.usedspace}, number of files {self.numoffiles} ,free space: {self.freeSpace()}")
@@ -69,4 +73,6 @@ class HardDisk():
                 self.usedspace = 0
             if self.numoffiles < 0:
                 self.numoffiles = 0
+class File:
+    
 
